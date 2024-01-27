@@ -1,3 +1,9 @@
+# Table of contents:
+### [Chapter 1 - Variables & Data Types](https://github.com/Kshi3620/JavaScript_Course?tab=readme-ov-file#chapter-1---variables--data-types)
+### [Chapter 2 - Operators & Conditional Statements](https://github.com/Kshi3620/JavaScript_Course?tab=readme-ov-file#chapter-2---operators--conditional-statements)
+
+
+
 # What is JavaScript?
 - JS is a programming language. We use it to give instructions to the computer.
 
@@ -205,3 +211,74 @@ alert("Hello!"); // It will show alert with message
 let name = prompt("Give your name"); // To get input from user
 console.log(name);
 ```
+
+# Chapter 3 - Loops & String
+
+## Loops in jS
+- Loops are used to execute a piece of code again & again.
+
+### for Loop:
+```js
+// Print MS DHoni 5 times
+for(let i = 1; i <= 5; i++){        // (Initilize; Stopping cond; Updatation)
+    console.log("MS Dhoni");
+}
+console.log("Loop has ended.");
+```
+```js
+//  Calculate sum of 1 to 5
+let sum = 0;
+for(let i=1; i<=5; i++){
+    sum = sum + i;
+}
+console.log("Sum =", sum);
+```
+### while Loop:
+```js
+// Print 1 to 5
+let i = 1;
+while(i<=5){        // while(stoping cond)
+    console.log(i);
+    i++;
+}
+```
+### do-while loop:
+```js
+let i = 20;
+do{
+    console.log("MS Dhoni");
+    i++;
+} while(i<=10);
+```
+### for-of Loop:
+- It helps to apply loops for Arrays, Strings
+```js
+let str = "MS Dhoni";
+
+for(let i of str){  // Iterator
+    console.log(i);
+}
+```
+### for-in Loop:
+```js
+let str = "MS Dhoni";
+
+for(let i of str){  // Iterator
+    console.log(i);
+}
+```
+```js
+// Question - Create a game where you start with any random game number. Ask the user to keep guessing the game number until the user enters correct value.
+
+let gameNumber = 7;
+
+let userNumber = prompt("Guess the game number = ");
+
+while(userNumber != gameNumber){
+    userNumber = prompt("You entered wrong number, Try again")
+}
+console.log("Congrats you enter the right number");
+```
+
+## Strings in JS
+
