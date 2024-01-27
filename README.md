@@ -66,3 +66,142 @@ console.log(student["age"]);
 ```
 
 # Chapter 2 - Operators & Conditional Statements
+
+## Operators in JS
+- Used to perform some operation on data.
+
+### Arithmetic Opearators & Unary Opearators
+(+, -, *, /)
+Modulus (%)
+Exponentiation (**)
+
+Increment (++)
+Decrement (--)
+
+```js
+let a = 5;
+let b = 6;
+
+console.log("a + b =", a + b);
+console.log("a - b =", a - b);
+console.log("a * b =", a * b);
+console.log("a / b =", a / b);
+
+console.log("a % b =", a % b);
+console.log("a ** b =", a ** b);
+
+// Unary Operators
+a++;                    // Post Increment
+console.log("a =", a);  
+
+b--;                    // Post Decrement
+console.log("b =", b);  
+
+++a;                    // Pre Increment
+console.log("a =", a);  
+
+--b;                    // Pre Decrement
+console.log("b =", b);  
+```
+
+### Assignment Opearators
+=  +=  -=  *=  %=  **=
+```js
+// Assignment Operator
+let a = 5;
+let b = 6;
+
+a += 4; // a = a + 4
+```
+
+### Comparison Operators
+Equal to (==)
+Not equal to (!=)
+Equal to & type (===)
+Not equal & type (!==)
+Others (<, >, >=, <=)
+
+```js
+// Comparison Operator
+let a = 2;
+let b = 2;
+let c = "2";
+
+console.log("2 == 2", a == b) // Output - True
+console.log(a == c) // Output - True
+console.log(a === c) // Output - False
+console.log(a > b) // Output - False
+```
+
+### Logical Operators
+Logical AND (&&) - T T = True all others are false
+Logical OR (||)  - F F = False all others are True
+Logical NOT (!)  - Make true to false & make false to true
+
+```js
+// Logical Operators
+let a  = 5;
+let b  = 3;
+let c = 4;
+
+let cond1 = a > b;
+let cond2 = a ===5;
+let cond3 = c ===2;
+
+console.log(cond1 && cond2); // Output - True
+console.log(cond1 || cond3); // Output - True
+console.log(!(c === 4));    // Output - False
+```
+
+## Conditional Statements
+- To implement some condition in the code
+
+### if Statement
+```js
+if(age > 18){
+    console.log("You can vote");
+}
+```
+
+### if-else Statement
+```js
+let color = "Black";
+
+if(color === "Black"){
+    console.log("Dark Mode");
+} else {
+    console.log("Its not dark mode");
+}
+```
+
+### else if Statement
+```js
+let num = 7;
+
+if(num % 2 === 0){
+    console.log("Its even number");
+} else if(num % 2 !== 0){
+    console.log("Its odd");
+} else{
+    console.log("Its zero")
+}
+```
+
+### Ternary Operators
+- condition ? true output : false output
+```js
+// Ternary Opearators
+
+let age = 15;
+
+let result = age >= 18 ? "adult" : "not adult"; // Simple & compact if-else
+console.log(result);
+// Output - not adult
+```
+
+```js
+alert("Hello!"); // It will show alert with message
+
+let name = prompt("Give your name"); // To get input from user
+console.log(name);
+```
