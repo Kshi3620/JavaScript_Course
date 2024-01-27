@@ -1,6 +1,6 @@
 # Table of contents:
 ### [Chapter 1 - Variables & Data Types](https://github.com/Kshi3620/JavaScript_Course?tab=readme-ov-file#chapter-1---variables--data-types)
-### [Chapter 2 - Operators & Conditional Statements](https://github.com/Kshi3620/JavaScript_Course?tab=readme-ov-file#chapter-2---operators--conditional-statements)
+### [Chapter 2 - Operators & Conditional Statements](https://github.com/Kshi3620/JavaScript_Course?tab=readme-ov-file#chapter-2---operators--conditional-statements-1)
 
 
 
