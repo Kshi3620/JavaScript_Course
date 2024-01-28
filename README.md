@@ -1,6 +1,7 @@
 # Table of contents:
 ### [Chapter 1 - Variables & Data Types](https://github.com/Kshi3620/JavaScript_Course?tab=readme-ov-file#chapter-1---variables--data-types-1)
 ### [Chapter 2 - Operators & Conditional Statements](https://github.com/Kshi3620/JavaScript_Course?tab=readme-ov-file#chapter-2---operators--conditional-statements-1)
+### [Chapter 3 - Loops & String](https://github.com/Kshi3620/JavaScript_Course?tab=readme-ov-file#chapter-3---loops--string)
 
 
 
@@ -268,7 +269,7 @@ for(let i of str){  // Iterator
 }
 ```
 ```js
-// Question - Create a game where you start with any random game number. Ask the user to keep guessing the game number until the user enters correct value.
+// Practice Question - Create a game where you start with any random game number. Ask the user to keep guessing the game number until the user enters correct value.
 
 let gameNumber = 7;
 
@@ -281,4 +282,122 @@ console.log("Congrats you enter the right number");
 ```
 
 ## Strings in JS
+- String is sequence of characters used to represent text.
 
+### Create String
+```js
+let str = "MS Dhoni";
+let str2 = 'Mahi';
+```
+### String Length
+```js
+str.length
+```
+### String Indices
+```js
+str[0], str[1], str[2]
+```
+
+### Template Literals
+```js
+let obj = {
+    item: "pen",
+    price: 10,
+};
+
+let output = `the cost of ${obj.item} is ${obj.price} rupees`; // ${expression} --> This is String interpolation
+console.log(output);
+```
+## String Methods in JS
+- These are built-in functions to manipulate a string.
+```js
+let str = "MS Dhoni";
+
+str.toUpperCase();
+
+str.toLowerCase();
+
+str.trim(); // removes whitespaces
+
+str.slice(start, end?); // returns part of string
+
+str.concat(str2);   // joins str2 with str
+
+str.replace(searchVal, newVal);
+
+str.charAt(2);
+```
+
+# CHapter 4 - Arrays
+
+## Arryas in JS
+- Collections of items
+
+### Create Array
+```js
+let cricketers = ['MS Dhoni', "Virat", "Rohit"];    // This is array 
+let runs = [70, 13, 45];
+
+cricketers.length();    // Array property
+console.log(cricketers.concat(runs));
+```
+### Array Indices
+```js
+arr[0], arr[1], arr[2] 
+```
+
+### Looping over an Array
+- Print all elements of an array.
+```js
+let cricketers = ["MS Dhoni", "Virat", "Rohit", "Jadeja"];
+
+// for loop
+for(let i=0; i<cricketers.length; i++){
+    console.log(cricketers[i])
+}
+
+// for of
+for(let ele of cricketers){
+    console.log(ele);
+    console.log(ele.toUpperCase());
+}
+```
+```js
+// Practice Question - For a given array with marks of students -> [85, 97, 44, 37, 76, 60] Find the average marks of the entire class.
+
+let marks = [85, 97, 44, 37, 76, 60];
+let sum = 0;
+for(let i in marks) {
+    sum = marks[i] + sum; 
+}
+let avg = sum / marks.length;
+console.log(avg);
+```
+
+## Array Methods in JS
+
+```js
+let players = ["MS Dhoni", "Jadeja", "Rohit", "Virat"]
+let runs = [45, 83, 90, 12];
+
+players.push("Kane");   // Add to end
+
+players.pop("Ruturaj"); // delete from end & return
+
+runs.toString();     // coverts array to string
+
+players.concat(runs);   // joins multiple arrays & return results
+
+players.unshift("Rinku");      // add to start 
+
+players.shift("Conway");        // delete from start and return
+
+players.slice(1, 3);          // returns a poece of the array -->  strat indx, end indx
+
+players.splice(2, 3, "Surya", "Bumrah");    // change original array (add, remove, replace) --> start indx, delCount, newElement
+
+```
+
+# Chapter 4 - Functions & Methods
+
+## 
