@@ -2,7 +2,7 @@
 ### [Chapter 1 - Variables & Data Types](https://github.com/Kshi3620/JavaScript_Course?tab=readme-ov-file#chapter-1---variables--data-types-1)
 ### [Chapter 2 - Operators & Conditional Statements](https://github.com/Kshi3620/JavaScript_Course?tab=readme-ov-file#chapter-2---operators--conditional-statements-1)
 ### [Chapter 3 - Loops & String](https://github.com/Kshi3620/JavaScript_Course?tab=readme-ov-file#chapter-3---loops--string-1)
-
+### [Chapter 4 - Arrays]
 
 
 # What is JavaScript?
@@ -328,7 +328,7 @@ str.replace(searchVal, newVal);
 str.charAt(2);
 ```
 
-# CHapter 4 - Arrays
+# Chapter 4 - Arrays
 
 ## Arryas in JS
 - Collections of items
@@ -398,6 +398,48 @@ players.splice(2, 3, "Surya", "Bumrah");    // change original array (add, remov
 
 ```
 
-# Chapter 4 - Functions & Methods
+# Chapter 5 - Functions & Methods
 
-## 
+## Functions in JS
+- Block of code that performs a specific task, can be invoked whenever needed.
+
+```js
+// Function Definition
+function functionName{
+    //do some work
+}
+
+// Function call
+functionName();
+```
+
+```js
+function myFunction(msg){   // parameter - input
+    console.log(msg)
+}
+
+myFunction("I Love you");   // argument
+```
+```js
+// Function -> 2 numebers, sum
+
+function sum(num1,num2){
+    total = (num1 + num2);
+    return total;
+}
+
+let c = sum(2, 4);
+console.log(c);
+```
+
+## Arrow Function
+- Compact way of writing function 
+
+```js
+let arrowSum = (num1, num2) => {
+    c = num1 + num2
+    return c;
+}
+
+console.log(arrowSum(2, 3))
+```
