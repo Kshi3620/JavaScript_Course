@@ -1,2 +1,1 @@
-# JavaScript Course Notes
-
+This is Readme File
