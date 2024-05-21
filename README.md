@@ -2,34 +2,95 @@
 
 # Index
 
-Chapter 1 - Variables
+1. Variables
+2. Data Types
+3. Data Types Summary
 
 # Variables
 
 ```js
-const accountId = 144553 // We cannot change const value
-let accountEmail = "kshitij@google.com" // We can change this value
+const accountId = 144553 // const cannot be reassigned
+let accountEmail = "sample" // let can be reassigned
 
-var accountPassword = "Kshitij@362000" // We can change this value
+var accountPassword = "Kshitij@362000" // var can be reassigned
 
-let accountState; // Undefined
+let accountState; 
+ 
 
+accountId = 2 
 
-// accountId = 2 // not allowed
-
-accountEmail = "kshi@google.com"
+accountEmail = "sample23"
 accountPassword = "Kshi@3620"
 accountCity = "Pune"
 
-console.log(accountId);
+console.log(accountId); // 144553
 
 /*
     Prefer not to use var
     because of issue in block scope and functional scope
 */
 
-console.table([accountId, accountEmail, accountPassword])
+console.table([accountId, accountEmail, accountPassword]) // 144553, sample, Kshitij@362000
 ```
 
 # Data Types
 
+- number => 2 to power 53
+- string => ""
+- boolean => true or false
+- null => standalone value
+- undefied => 
+- symbol => unique
+
+```js
+let name = "Kshitij" // string
+let age = 24 // number
+let isLoggedIn = true // boolean
+let state = null // null
+let city; // undefined
+```
+
+## Type Conversion
+
+```js
+let score = "33" // String
+
+console.log(typeof(score)); // String
+
+let valueInNumber = Number(score) // this is type conversion
+let valueInString = String(score) // this is type conversion
+
+console.log(typeof(valueInNumber)); // Number
+```
+
+## Operations
+
+```js
+// **************** Operations *****************
+
+let value = 3
+let negValue = -value
+let str1 = "hello"
+let str2 = " Kshitij"
+
+console.log(negValue); // -3
+console.log(2 + 2); // 4
+console.log(2 ** 3); // 8
+
+console.log(str1 + str2); // hello Kshitij
+```
+
+## Comparison
+
+```js
+console.log(2 > 1); // true
+console.log(2 < 1); // false
+console.log(2 == 1); // false
+console.log(2 != 1); // true
+```
+
+# Data Types Summary
+
+```py
+
+```
