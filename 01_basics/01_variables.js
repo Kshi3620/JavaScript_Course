@@ -1,12 +1,3 @@
-# JavaScript Notes
-
-# Index
-
-Chapter 1 - Variables
-
-# Variables
-
-```js
 const accountId = 144553 // We cannot change const value
 let accountEmail = "kshitij@google.com" // We can change this value
 
@@ -29,7 +20,3 @@ console.log(accountId);
 */
 
 console.table([accountId, accountEmail, accountPassword])
-```
-
-# Data Types
-
