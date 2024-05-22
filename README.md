@@ -91,6 +91,34 @@ console.log(2 != 1); // true
 
 # Data Types Summary
 
-```py
+## Primitive Data Types
+- String, Number, Boolean, null, undefined, Symbol, BigInt
 
+```js
+const score = 100 // Integer
+const scoreValue = 100.3 // Float
+
+const isLoggedIn = false // Boolean
+const outsideTemp = null // Null
+
+let userEmail; // undefined
+
+const id = Symbol("123") // Symbol
+const bigNumber = 7828323832n // BigInt
+```
+
+## Non primitive
+- Array, Objects, Functions
+
+```js
+const heros = ["Spiderman", "Hanuman", "Batman", "Superman"]; // array
+
+let obj = {             // object
+    name : "Kshitij",
+    age : 22,
+}
+
+const myFunction = function(){
+   console.log('Hello World');
+}
 ```
