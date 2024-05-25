@@ -200,8 +200,6 @@ console.log(Math.round((Math.random() * (max - min + 1)))) // Random Valure Eg. 
 # Date & Time in JavaScript
 
 ```js
-
-
 let myDate = new Date()
 
 console.log(myDate); // 2024-05-25T08:55:57.730Z
@@ -228,3 +226,75 @@ console.log(newDate.toLocaleDateString('default', {
     weekday : "long",
 })); // Saturday
 ```
+
+# Arrays in JavaScript
+
+```js
+// Arrays
+
+const myArr = [0, 1, 2, 3, 4, true, "Kshitij"]
+const myArr2 = ["Shhaktiman", "Spiderman", "Hanuman"]
+const myArr3 = new Array (1, 2, 4, 5)
+
+// Arrays Methods
+
+console.log(myArr.push(6));
+console.log(myArr2.pop());
+
+console.log(myArr3.shift());
+
+console.log(myArr.includes(3)); // true
+console.log(myArr.indexOf("Kshitij"));
+
+console.log(myArr.join()); // 0,1, 2,3,4,true,Kshitij,6 (Its convertedd to String)
+
+// slice & splice methods
+
+const arr2 = [1, 2, 3, 4, 5]
+
+const newArr3 = arr2.slice(1, 3) // [ 2, 3 ]
+
+const newArr4 = arr2.splice(1, 3) // [ 2, 3, 4 ]
+
+console.log(newArr3);
+console.log(newArr4);
+
+/*
+
+Note :  slice create new array and do modify in that
+        splice do modifications in same array
+
+*/
+```
+
+```js
+const marvel = ["thor", "spiderman", "hulk"]
+const dc = ["batman", "superman", "flash"]
+
+const arr1 = marvel.concat(dc)
+console.log(arr1); // [ 'thor', 'spiderman', 'hulk', 'batman', 'superman', 'flash' ]
+
+const arr2 = [...marvel, ...dc]
+console.log(arr2); // [ 'thor', 'spiderman', 'hulk', 'batman', 'superman', 'flash' ]
+
+const arr3 =[1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]
+
+const arr4 = arr3.flat(Infinity)
+console.log(arr4);
+
+/*
+[
+    1, 2, 3, 4, 5,
+    6, 7, 6, 7, 4,
+    5
+  ]
+*/
+
+let score1 = 100
+let score2 = 200
+let score3 = 300
+
+console.log(Array.of(score1, score2, score3)); // [ 100, 200, 300 ]
+```
+
+# Objects

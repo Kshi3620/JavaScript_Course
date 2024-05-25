@@ -1,28 +1,27 @@
+const marvel = ["thor", "spiderman", "hulk"]
+const dc = ["batman", "superman", "flash"]
 
+const arr1 = marvel.concat(dc)
+console.log(arr1); // [ 'thor', 'spiderman', 'hulk', 'batman', 'superman', 'flash' ]
 
-let myDate = new Date()
+const arr2 = [...marvel, ...dc]
+console.log(arr2); // [ 'thor', 'spiderman', 'hulk', 'batman', 'superman', 'flash' ]
 
-console.log(myDate); // 2024-05-25T08:55:57.730Z
-console.log(myDate.toString()); // Sat May 25 2024 14:26:38 GMT+0530 (India Standard Time)
-console.log(myDate.toLocaleDateString()); // 25/5/2024
+const arr3 =[1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]
 
-console.log(typeof(myDate)); // object
+const arr4 = arr3.flat(Infinity)
+console.log(arr4);
 
-let myCreatedDate = new Date(2024, 0, 23)
-console.log(myCreatedDate.toString()); // Tue Jan 23 2024 00:00:00 GMT+0530 (India Standard Time)
+/*
+[
+    1, 2, 3, 4, 5,
+    6, 7, 6, 7, 4,
+    5
+  ]
+*/
 
-let myCreatedDate2 = new Date("2023-01-14")
-console.log(myCreatedDate2.toString()); // Sat Jan 14 2023 05:30:00 GMT+0530 (India Standard Time)
+let score1 = 100
+let score2 = 200
+let score3 = 300
 
-
-let myTimeStamp  = Date.now()
-console.log(myTimeStamp.toString()); // 1716627914933
-
-console.log(Math.round(Date.now()/1000)); 1716628667
-
-let newDate = new Date()
-
-console.log(newDate.toLocaleDateString('default', {
-    weekday : "long",
-})); // Saturday
-
+console.log(Array.of(score1, score2, score3)); // [ 100, 200, 300 ]
