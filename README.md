@@ -196,3 +196,9 @@ const max = 20
 
 console.log(Math.round((Math.random() * (max - min + 1)))) // Random Valure Eg. 9
 ```
+
+# Date & Time in JavaScript
+
+```js
+
+```
