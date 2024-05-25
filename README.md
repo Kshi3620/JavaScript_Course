@@ -154,3 +154,45 @@ console.log(url.includes("kshitij"));
 const newString2 = "kshitij-nehete-hello"
 console.log(newString2.split('-'));
 ```
+
+# Numbers & Maths in JavaScript
+
+```js
+// ************************* Numbers *******************
+
+const score = 400
+
+const balance = new Number(100)
+
+console.log(score); // 400
+console.log(balance); // [Number: 100]
+
+console.log(balance.toString()); // 100 (This is in String)
+
+console.log(balance.toFixed(2)); // 100.0
+
+const otherNumber = 123.8966
+
+console.log(otherNumber.toPrecision(3)); // 124
+console.log(otherNumber.toPrecision(2)); // 1.2e+2
+
+const hundreds = 100000
+
+console.log(hundreds.toLocaleString()); // 1,00,000
+console.log(hundreds.toLocaleString('en-IN'));
+```
+
+```js
+// ************************* Maths *******************
+
+console.log(Math);
+console.log(Math.abs(-4)); // 4
+console.log(Math.round(4, 6)); // 4 
+console.log(Math.sqrt(8)); // 2
+console.log(Math.min(2, 5, 6, 9)); // 2
+
+const min = 10
+const max = 20
+
+console.log(Math.round((Math.random() * (max - min + 1)))) // Random Valure Eg. 9
+```

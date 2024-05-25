@@ -1,27 +1,12 @@
-const  name = "hitesh"
-const repoCount = 50
+// ************************* Maths *******************
 
-console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
+console.log(Math);
+console.log(Math.abs(-4)); // 4
+console.log(Math.round(4, 6)); // 4 
+console.log(Math.sqrt(8)); // 2
+console.log(Math.min(2, 5, 6, 9)); // 2
 
-const gameName = new String ("Valorant")
- 
-console.log(gameName[0]);
-console.log(gameName.length);
-console.log(gameName.toUpperCase());
-console.log(gameName.charAt(2));
-console.log(gameName.indexOf('r'));
+const min = 10
+const max = 20
 
-const newString = gameName.substring(0, 4)
-console.log(newString);
-
-console.log(gameName.slice(-5, 2));
-
-const newString1 = "     hitesh   "
-console.log(newString1.trim());
-
-const url = "https://kshtiij.com/kshitij%20nehete"
-console.log(url.replace("%20", "-"));
-console.log(url.includes("kshitij"));
-
-const newString2 = "kshitij-nehete-hello"
-console.log(newString2.split('-'));
+console.log(Math.round((Math.random() * (max - min + 1)))) // Random Valure Eg. 9
