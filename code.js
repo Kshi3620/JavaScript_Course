@@ -1,16 +1,15 @@
-function calculateCartPrice(...num){ // ... this is rest operator
-  return num
+// ************************ interesting ****************
+
+console.log(addOne(5)) // 6 Since We have declare function it will show outout
+
+function addOne(num){
+  return num + 1
 }
 
-console.log(calculateCartPrice(200, 300, 400)); // [ 200, 300, 400 ]
 
-const user = {
-  username : "kshitij",
-  price : 199
+console.log(addTwo(5)) // Error - We have declare function but it is in variable
+
+const addTwo = function(num){
+  return num + 2
 }
 
-function handleObject(anyObject){
-  console.log(`username is ${anyObject.username} and price is ${anyObject.price}`);
-}
-
-handleObject(user) // username is kshitij and price is 199

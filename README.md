@@ -468,7 +468,57 @@ function handleObject(anyObject){
 handleObject(user) // username is kshitij and price is 199
 ```
 
+# Scopes in JS
 
+```js
+if (true){
+  let a = 10
+  const b = 20
+  var c = 30
+}
+
+console.log(a); // Error
+console.log(b); // Error
+console.log(c); // 30
+```
+```js
+if (true){
+  let a = 10
+  const b = 20
+  var c = 30
+}
+
+console.log(a); // Error
+console.log(b); // Error
+console.log(c); // 30
+```
+```js
+if (true){
+  const username = "MSD"
+  if (true){
+    const website = " YouTube"
+    console.log(username + website); // MSD YouTube
+  }
+  console.log(website); // Error
+}
+console.log(username); // Error
+```
+```js
+// ************************ interesting ****************
+
+console.log(addOne(5)) // 6 Since We have declare function it will show outout
+
+function addOne(num){
+  return num + 1
+}
+
+
+console.log(addTwo(5)) // Error - We have declare function but it is in variable
+
+const addTwo = function(num){
+  return num + 2
+}
+```
 
 
 
