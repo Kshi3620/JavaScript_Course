@@ -414,6 +414,61 @@ const {courseIntructor} = course // Object de-structuring
 
 console.log(courseIntructor); // hitesh
 ```
+# Functions in JS
+
+```js
+function sayMyName(){ // This is Function
+  console.log("K");
+  console.log("s");
+  console.log("h");
+  console.log("i");
+  console.log("t");
+  console.log("i");
+  console.log("j");
+}
+
+sayMyName() // Function Calling
+```
+
+```js
+function addTwoNumbers(num1, num2){ // num1, num2 are the parameter
+  return num1 + num2
+}
+
+const result = addTwoNumbers(2, 3) // 2, 3 are the arguments
+console.log(result); // 5
+```
+```js
+function loginUserMessage(username){
+  return `${username} just logged in`
+}
+
+console.log(loginUserMessage("Kshitij")); // Kshitij just logged in
+console.log(loginUserMessage()); // undefined just logged in
+```
+
+## Functions with objects & array
+
+```js
+function calculateCartPrice(...num){ // ... this is rest operator
+  return num
+}
+
+console.log(calculateCartPrice(200, 300, 400)); // [ 200, 300, 400 ]
+
+const user = {
+  username : "kshitij",
+  price : 199
+}
+
+function handleObject(anyObject){
+  console.log(`username is ${anyObject.username} and price is ${anyObject.price}`);
+}
+
+handleObject(user) // username is kshitij and price is 199
+```
+
+
 
 
 
