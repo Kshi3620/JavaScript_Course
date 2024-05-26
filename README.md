@@ -297,4 +297,114 @@ let score3 = 300
 console.log(Array.of(score1, score2, score3)); // [ 100, 200, 300 ]
 ```
 
-# Objects
+# Objects in JavaScript
+
+## object literals
+
+```js
+// object literals
+
+const mySym = Symbol()
+
+const JsUser = {
+  name : "Kshitij",
+  "full name" : "Kshitij Nehete",
+  age : 18,
+  [mySym] : "myKey1", // This is declaratio of symbol
+  location : "Pune",
+  email : "ksh@kncricket.com",
+  isLoggedIn : false
+
+}
+
+console.log(JsUser.name); // Kshitij
+console.log(JsUser["email"]); // ksh@kncricket.com
+
+console.log(JsUser["full name"]); // Kshitij Nehete
+console.log(JsUser[mySym]); // myKey1
+
+JsUser.name = "Omendra" // Changing values
+
+Object.freeze(JsUser) // After this values will not change for objects
+```
+
+```js
+const mySym = Symbol()
+
+const JsUser = {
+  name : "Kshitij",
+  "full name" : "Kshitij Nehete",
+  age : 18,
+  [mySym] : "myKey1", // This is declaratio of symbol
+  location : "Pune",
+  email : "ksh@kncricket.com",
+  isLoggedIn : false
+
+}
+
+JsUser.greeeting = function(){
+  console.log("Hello JsUsers");
+}
+
+JsUser.greeetingTwo = function(){
+  console.log(`Hello JS USer, ${this.name}`);
+}
+
+console.log(JsUser.greeeting()); // Hello JsUsers
+console.log(JsUser.greeetingTwo()); // Hello JS USer, Kshitij
+```
+
+```js
+const tinderUser = {}
+
+tinderUser.id = "123ABC"
+tinderUser.name = "Sammy"
+tinderUser.isLoggedIn = true
+
+const regularUser = {
+  email : "sam@gmail.com",
+  fullName : {
+    userFullName : {
+      firstName : "Kshitij",
+      lastName : "Nehete"
+    }
+  }
+}
+
+console.log(regularUser.fullName); // { userFullName: { firstName: 'Kshitij', lastName: 'Nehete' } }
+console.log(regularUser.fullName.userFullName.firstName); // Kshitij
+```
+
+```js
+const obj1 = {
+  1 : "a",
+  2 : "b"
+}
+
+const obj2 = {
+  3 : "c",
+  4 : "d"
+}
+
+const obj3 = Object.assign(obj1, obj2)
+console.log(obj3); // { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
+
+const obj4 = Object.assign({}, obj1, obj2) // Good Practice
+console.log(obj4); // { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
+
+const obj5 = {...obj1, ...obj2}
+console.log(obj5); // { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }\
+```
+
+```js
+const tinderUser = {}
+
+tinderUser.id = "123ABC"
+tinderUser.name = "Sammy"
+tinderUser.isLoggedIn = true
+
+console.log(Object.keys(tinderUser)); // [ 'id', 'name', 'isLoggedIn' ]
+console.log(Object.values(tinderUser)); // [ '123ABC', 'Sammy', true ]
+```
+
+
