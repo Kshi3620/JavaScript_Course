@@ -520,5 +520,45 @@ const addTwo = function(num){
 }
 ```
 
+# Arrow Function & This keyword
+
+## this keyword
+
+```js
+const user = {
+  username : "Kshitij",
+  price : 999,
+  welcomeMessage : function(){
+    console.log(`${this.username} welcome to website`); // this keyword ref current context
+  }
+}
+
+const username = "sam" // Here we are changing current context
+```
+
+## Arrow function
+
+```js
+const chai = () => {     // Arrow Function
+  let username = "MSD"
+  console.log(username);
+}
+
+chai() // MSD
+```
+
+```js
+const addTwo = (num1, num2) => { // Explicit Arrow function
+  return num1 + num2
+}
+console.log(addTwo(2, 3)); // 5
+
+const addThree = (num1, num2) => num1 + num2 // Implicit Arrow function
+
+/*
+  Note :  if we are using  {} then we have to use return
+*/
+```
+
 
 
