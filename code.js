@@ -1,10 +1,11 @@
-const addTwo = (num1, num2) => { // Explicit Arrow function
-  return num1 + num2
-}
-console.log(addTwo(2, 3)); // 5
+// Immediately Invoked Function Expression (IIFE)
 
-const addThree = (num1, num2) => num1 + num2 // Implicit Arrow function
+(function chai(){
+  // named IIFE
+  console.log(`DB Coonnected`);
+}) (); // DB Connected
 
-/*
-  Note :  if we are using  {} then we have to use return
-*/
+( (name) => {
+  // unnamed IIFE
+  console.log(`DB connected ${name}`);
+}) ("Kshitij"); // DB connected Kshitij
