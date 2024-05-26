@@ -1,11 +1,5 @@
 # JavaScript Notes
 
-# Index
-
-1. Variables
-2. Data Types
-3. Data Types Summary
-
 # Variables
 
 ```js
@@ -406,5 +400,20 @@ tinderUser.isLoggedIn = true
 console.log(Object.keys(tinderUser)); // [ 'id', 'name', 'isLoggedIn' ]
 console.log(Object.values(tinderUser)); // [ '123ABC', 'Sammy', true ]
 ```
+
+## object de-structuring
+
+```js
+const course = {
+  name : "JS",
+  price : "999",
+  courseIntructor : "hitesh"
+}
+
+const {courseIntructor} = course // Object de-structuring
+
+console.log(courseIntructor); // hitesh
+```
+
 
 
