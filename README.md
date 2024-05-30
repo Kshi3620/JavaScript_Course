@@ -576,5 +576,199 @@ const addThree = (num1, num2) => num1 + num2 // Implicit Arrow function
 }) ("Kshitij"); // DB connected Kshitij
 ```
 
+# Important for Interview
 
+## JavaScript Execution Context (EC)
 
+1. Global Execution Context
+2. Function Execution Context
+
+```js
+let val1 = 10
+let val2 = 5
+
+function addNumber(num1, num2){
+  let total = num1 + num2
+  return total
+}
+
+let result1 = addNumber(val1, val2)
+let result2 = addNumber(10, 2)
+
+/*
+
+// ****************** Memory Phase ******************
+
+val1 => undefined
+val2 => undefined
+addNum => defination
+result1 => undefined
+result2 => undefined
+
+*/
+
+/*
+
+// **************** Execution Phase ***************
+
+val1 => 10
+val2 => 5
+addNum => defination
+result1 => executional context =>{
+  new variable
+  +
+  execution thread
+}     => {
+  ********** Memory Phase *********
+  val1 => undefined
+  val2 => undefined
+  total => udefined
+  
+  ********* Execution Context *********
+  num1 => 10
+  num2 => 5
+  total => 15   // This total will return in execution context
+
+}
+result2 => undefined
+*/
+```
+# Control Flow
+
+## If
+
+```js
+// if
+
+temperature = 41
+
+if (temperature <= 40){
+    console.log("Less than 41");
+} else {
+    console.log("Greater than 41");
+}
+```
+```js
+const score = 200
+
+if (score > 100){
+    const power = "fly"
+    console.log(`user power: ${power}`); // user power: fly
+}
+
+console.log(`User power: ${power}` ); // Error as const in block scope
+```
+
+```js
+const balance = 1000
+
+if (balance < 500){
+    console.log('Less than');
+} else if (balance < 750){
+    console.log("Less than 750");
+} else if (balance < 950){
+    console.log("Less than 950");
+} else {
+    console.log("Less than 1200");
+}
+```
+```js
+// && (and) ==> all condn should be true
+
+const userLoggedIn = true
+const debitCard = true
+
+if (userLoggedIn && debitCard){
+    console.log("Allow to buy courses");
+}
+```
+
+```js
+// || (or) ==> one condition should be true
+
+const userLoggedIn = true
+const debitCard = true
+const loggedInFromGoogle = false
+const loggedInFromEmail = true
+
+if (loggedInFromEmail || loggedInFromEmail){
+    console.log("User logged in");
+}
+```
+
+## Switch
+
+```js
+const month = 3
+
+switch (month){
+    case 1:
+        console.log("Jan");
+        break
+    case 2:
+        console.log("Feb");
+        break
+    case 3:
+        console.log("Mar");
+        break
+    case 4:
+        console.log("Apr");
+        break
+    default:
+        console.log("Default case match");
+}
+```
+
+## truthy
+
+```js
+const userMail = "Kshitij.ai"
+
+if (userMail){ // This is called truthy value
+    console.log('Got user mail');
+} else {
+    console.log("dont have user mail");
+}
+
+/*
+Falsy values ==>
+
+false, 0, -0, BigInt 0n, "", null, undefined, NaN
+apart from above all other are truthy values
+
+truthy values ==>
+
+"0", 'false', " ", [], {}, function(){}
+
+*/
+```
+```js
+const emptyObj = {}
+
+if (Object.keys(emptyObj).length === 0){
+    console.log("object is empty"); // object is empty
+}
+```
+
+## Nullish Coalescing Operator (??): null undefined
+
+```js
+let val1;
+val1 = 5 ?? 10
+val2 = null ?? 10
+val3 = undefined ?? 15
+
+console.log(val1); // 5
+console.log(val2); // 10
+console.log(val3); // undefined
+```
+
+## Terniary Operator
+
+```js
+//condition ? true : false
+
+const iceTeaPrice = 100
+
+iceTeaPrice >= 80 ? console.log("less than 80") : console.log("more than 80"); // less than 80
+```

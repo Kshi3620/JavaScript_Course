@@ -1,11 +1,5 @@
-// Immediately Invoked Function Expression (IIFE)
+//condition ? true : false
 
-(function chai(){
-  // named IIFE
-  console.log(`DB Coonnected`);
-}) (); // DB Connected
+const iceTeaPrice = 100
 
-( (name) => {
-  // unnamed IIFE
-  console.log(`DB connected ${name}`);
-}) ("Kshitij"); // DB connected Kshitij
+iceTeaPrice >= 80 ? console.log("less than 80") : console.log("more than 80"); // less than 80
