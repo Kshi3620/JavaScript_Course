@@ -772,3 +772,49 @@ const iceTeaPrice = 100
 
 iceTeaPrice >= 80 ? console.log("less than 80") : console.log("more than 80"); // less than 80
 ```
+
+# For loop with break and continue in JavaScript
+
+## Interations 
+
+```js
+// for
+
+for (let i = 0; i <= 10; i++) {
+    const element = i;
+    if (element == 5){
+        console.log(`Numebr is ${element}`);
+    }
+    console.log(element);
+}
+```
+```js
+for (let i = 1; i <= 10; i++) {
+    console.log(`inner loop value: ${i}`);
+    for(let j = 1; j <= 10; j++){
+        // console.log(`outer loop value: ${j}`);
+        console.log(i + '*' + j + ' = ' + i*j);
+    }
+}
+```
+```js
+let myArray = ["flash", "superman", "spiderman"]
+
+for (let i = 0; i < myArray.length; i++){
+    console.log(myArray[i]);
+}
+```
+
+## break and continue
+
+```js
+// break and continue
+
+for (let i = 0; i <= 20; i++){
+    if (i == 5){
+        console.log(`detected 5`)
+        break                       // here loop will stop and program jump to line no 10
+    }
+    console.log(`value of i is ${i}`);
+}
+```

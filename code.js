@@ -1,5 +1,9 @@
-//condition ? true : false
+// break and continue
 
-const iceTeaPrice = 100
-
-iceTeaPrice >= 80 ? console.log("less than 80") : console.log("more than 80"); // less than 80
+for (let i = 0; i <= 20; i++){
+    if (i == 5){
+        console.log(`detected 5`)
+        continue                       // here
+    }
+    console.log(`value of i is ${i}`);
+}
