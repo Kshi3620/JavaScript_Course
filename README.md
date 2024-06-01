@@ -818,3 +818,176 @@ for (let i = 0; i <= 20; i++){
     console.log(`value of i is ${i}`);
 }
 ```
+
+```js
+// break and continue
+
+for (let i = 0; i <= 20; i++){
+    if (i == 5){
+        console.log(`detected 5`)
+        continue                       // here loop will skip this particular and jump to start of loop
+    }
+    console.log(`value of i is ${i}`);
+}
+```
+
+## While and do while loop in JavaScript
+
+```js
+// while
+
+let index = 0
+while (index <= 10){
+    console.log(`Value of index is ${index}`);
+    index = index + 2
+}
+```
+```js
+let myArray = ["flash", "superman", "sspiderman"]
+
+let arr = 0
+while (arr < myArray.length){
+    console.log(`value is ${myArray[arr]}`);
+    arr++
+}
+```
+```js
+// do while
+
+let score = 6
+
+do{
+    console.log(`score is ${score}`);
+    score++
+} while (score <= 10)
+```
+
+## for of loop
+```js
+// for of
+
+const arr = [1, 2, 3, 4, 5]
+
+for (const num of arr){
+    console.log(num);
+}
+```
+```js
+const greeting = "Hello World"
+
+for (const greet of greeting){
+    console.log(`Each char is ${greet}`);
+}
+```
+## Maps
+- Values in maps are unique and orderwise
+```js
+// Maps
+
+const map = new Map()
+map.set("IN", "India")
+map.set("USA", "United States of America")
+map.set("FR", "France")
+
+console.log(map);
+```
+
+```js
+// for of loop on maps
+// Maps
+
+const map = new Map()
+map.set("IN", "India")
+map.set("USA", "United States of America")
+map.set("FR", "France")
+
+for (const [key, value] of map){ // Array destructruing
+    console.log(key, ":-", value );
+}
+```
+```js
+// Objects are not iteratable with for of
+```
+
+## for in loop
+
+```js
+// for in
+
+const myObject = {
+    js: "javascript",
+    cpp: "C++",
+    rb: "ruby"
+}
+
+for (const key in myObject){
+    console.log(`${key} shorcut is for ${myObject[key]}`);
+}
+```
+```js
+// for in loop on array
+
+const myArray = ["js", "java", "python", "rb"]
+
+for (const key in myArray){
+    console.log(myArray[key]);
+}
+```
+
+## for each loop
+
+```js
+// for each loop
+
+const coding = ["java", "js", "python", "ruby"]
+
+coding.forEach( function (val) {
+    console.log(val);
+})
+```
+
+```js
+const coding = ["java", "js", "python", "ruby"]
+
+coding.forEach( (val) => {
+    console.log(val);
+})
+```
+```js
+const coding = ["java", "js", "python", "ruby"]
+
+function printMe(item){
+    console.log(item);
+}
+
+coding.forEach(printMe)
+```
+
+```js
+const coding = ["java", "js", "python", "ruby"]
+
+coding.forEach( (item, index, arr) => {
+    console.log(item, index, arr);
+})
+```
+
+```js
+const myCoding = [
+    {
+        langName: "javascript",
+        langFileName: "js"
+    },
+    {
+        langName: "java",
+        langFileName: "java"
+    },
+    {
+        langName: "python",
+        langFileName: "py"
+    }
+]
+
+myCoding.forEach( (item) => {
+    console.log(item.langName);
+})
+```

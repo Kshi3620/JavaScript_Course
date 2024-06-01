@@ -1,9 +1,18 @@
-// break and continue
-
-for (let i = 0; i <= 20; i++){
-    if (i == 5){
-        console.log(`detected 5`)
-        continue                       // here
+const myCoding = [
+    {
+        langName: "javascript",
+        langFileName: "js"
+    },
+    {
+        langName: "java",
+        langFileName: "java"
+    },
+    {
+        langName: "python",
+        langFileName: "py"
     }
-    console.log(`value of i is ${i}`);
-}
+]
+
+myCoding.forEach( (item) => {
+    console.log(item.langName);
+})
