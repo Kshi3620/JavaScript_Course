@@ -813,18 +813,8 @@ for (let i = 0; i < myArray.length; i++){
 for (let i = 0; i <= 20; i++){
     if (i == 5){
         console.log(`detected 5`)
-        break                       // here loop will stop and program will out of scope
+        break                       // here loop will stop and program jump to line no 10
     }
     console.log(`value of i is ${i}`);
 }
 ```
-```js
-// break and continue
-
-for (let i = 0; i <= 20; i++){
-    if (i == 5){
-        console.log(`detected 5`)
-        continue                       // it will skip here and program jump to starting loop 
-    }
-    console.log(`value of i is ${i}`);
-}
