@@ -1,18 +1,24 @@
-const myCoding = [
+const shopCart = [
     {
-        langName: "javascript",
-        langFileName: "js"
+        course: "js",
+        price: 199
     },
     {
-        langName: "java",
-        langFileName: "java"
+        course: "java",
+        price: 299
     },
     {
-        langName: "python",
-        langFileName: "py"
+        course: "python",
+        price: 99
+    },
+    {
+        course: "data",
+        price: 499
     }
 ]
 
-myCoding.forEach( (item) => {
-    console.log(item.langName);
-})
+const priceTopay = shopCart.reduce( (acc, item) => {
+    return acc + item.price
+}, 0)
+
+console.log(priceTopay); // 1096

@@ -991,3 +991,132 @@ myCoding.forEach( (item) => {
     console.log(item.langName);
 })
 ```
+
+## filter map and reduce
+
+```js
+// filter
+const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const newNums = myNums.filter( (num) => num > 4)
+console.log(newNums); // [ 5, 6, 7, 8, 9, 10 ]
+
+const newNums2 = myNums.filter( (num) => {
+    return num > 4  // if we use {} then we have to write return
+    
+})
+console.log(newNums); // [ 5, 6, 7, 8, 9, 10 ]
+```
+
+```js
+const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const newNums = []
+
+myNums.forEach( (num) => {
+    if (num > 4){
+        newNums.push(num)
+    }
+})
+
+console.log(newNums); // [ 5, 6, 7, 8, 9, 10 ]
+```
+```js
+// map
+
+const myNums = [1, 2, 3, 4]
+
+const newNums = myNums.map ( (num) => {
+    return num + 10
+})
+
+console.log(newNums); // [ 11, 12, 13, 14 ]
+```
+
+```js
+const myNums = [1, 2, 3, 4]
+
+const newNumbs = myNums
+                .map( (num) => num + 10)
+                .map( (num) => num + 1)
+
+console.log(newNumbs); // [ 12, 13, 14, 15 ]
+```
+
+```js
+// map and filter together
+
+const myNums = [1, 2, 3, 4]
+
+const newNumbs = myNums
+                .map( (num) => num + 10)
+                .map( (num) => num + 1)
+                .filter( (num) => num >=14)
+
+console.log(newNumbs); // [ 14, 15 ]
+```
+
+```js
+// reduce
+
+const myNums = [1, 2, 3]
+
+const myTotal = myNums.reduce(function (acc, currValue) {
+    console.log(`acc: ${acc} and currValue: ${currValue}`);
+    return acc + currValue
+}, 2) // here we have added 2 as initial value
+
+console.log(myTotal);
+
+/* Output:
+acc: 2 and currValue: 1
+acc: 3 and currValue: 2
+acc: 5 and currValue: 3
+8
+*/
+```
+```js
+const myNums = [1, 2, 3]
+
+const myTotal = myNums.reduce( (acc, currValue) => {
+    console.log(`acc: ${acc} and currValue: ${currValue}`);
+    return acc = currValue
+}, 0)
+
+console.log(myTotal);
+
+/* Output:
+acc: 0 and currValue: 1
+acc: 1 and currValue: 2
+acc: 2 and currValue: 3
+3
+*/
+```
+
+```js
+const shopCart = [
+    {
+        course: "js",
+        price: 199
+    },
+    {
+        course: "java",
+        price: 299
+    },
+    {
+        course: "python",
+        price: 99
+    },
+    {
+        course: "data",
+        price: 499
+    }
+]
+
+const priceTopay = shopCart.reduce( (acc, item) => {
+    return acc + item.price
+}, 0)
+
+console.log(priceTopay); // 1096
+```
+
