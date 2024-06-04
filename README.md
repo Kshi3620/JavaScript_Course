@@ -1119,4 +1119,70 @@ const priceTopay = shopCart.reduce( (acc, item) => {
 
 console.log(priceTopay); // 1096
 ```
+# DOM - Manipulation
+
+```js
+// file => one.html
+
+// following code in console
+document.getElementById('title') // <h1 id="title" class="heading">DOM Learning on chai aur code</h1>
+
+document.getElementById('title').id // 'title'
+
+document.getElementById('title').className // 'heading'
+
+document.getElementById('title').setAttribute('class', 'test') // It will overwrite from class to test2q
+
+title.style.backgroundColor = 'green' // It will change background color
+
+title.style.padding = '15px' // it will style padding
+
+title.innerHTML // 'DOM Learning on chai aur code<span style="display: none;"> test text</span>'
+
+title.innerText // 'DOM Learning on chai aur code test text'
+
+title.textContent // 'DOM Learning on chai aur code'
+```
+
+## query selector
+
+```js
+// file => one.html
+
+// following code in console
+
+document.querySelector('h2') // <h2> Hello </h2>
+
+const myUl = document.querySelector('li')
+myUl.style.backgroundColor = 'green'
+```
+
+## query selectorall
+```js
+
+document.querySelectorAll('li')
+
+const tempLiList = document.querySelectorAll('li')
+
+tempLiList.style.color = 'green' // Error
+tempLiList[0].style.color = 'green' // It give give green color to first element
+
+tempLiList.forEach(function (l) {
+  l.style.backgroundColor = 'green'
+})
+```
+
+```js
+document.getElementsByClassName('listItem') // HTMLCollection []
+
+tempClassList.forEach(function(li){
+    console.log(li)
+})
+
+Array.from(tempClassList) // Converting tempClassList to array
+const myConvertedArray = Array.from(tempClassList)
+
+myConvertedArray.forEach(function (li) {
+    li.style.color = 'orange'
+})
 
