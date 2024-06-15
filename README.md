@@ -1188,7 +1188,7 @@ myConvertedArray.forEach(function (li) {
 ```
 ## How to create a new element in DOM
 
-```js
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1228,7 +1228,7 @@ myConvertedArray.forEach(function (li) {
 
 ## Create element in DOM
 
-```js
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1259,7 +1259,7 @@ myConvertedArray.forEach(function (li) {
 
 ## Edit and remove elements in DOM
 
-```js
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
