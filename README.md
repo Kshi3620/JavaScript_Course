@@ -1185,4 +1185,45 @@ const myConvertedArray = Array.from(tempClassList)
 myConvertedArray.forEach(function (li) {
     li.style.color = 'orange'
 })
+```
+## How to create a new element in DOM
 
+```js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOm | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thu</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[1].innerHTML); // Tue
+
+    for (let i = 0; i< parent.children.length; i++) {
+      console.log(parent.children[i].innerHTML); // It will show all values by iterator
+    }
+
+    parent.children[1].style.color = "orange"
+    console.log(parent.firstElementChild);
+
+    const day1 = document.querySelector('.day')
+    console.log(day1.innerHTML);
+    console.log(day1.parentElement);
+
+    console.log("NODES: ", parent.childNodes);
+</script>
+</html>
+```
+
+## Create element in DOM

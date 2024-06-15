@@ -2,29 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <title>DOM Learning</title>
-    <style>
-        .bg-black{
-            background-color: #212121;
-            color: #fff;
-
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
 </head>
-<body  class="bg-black">
-    <div>
-        <h1 id="title" class="heading">DOM Learning on chai aur code<span style="display: none;"> test text</span></h1>
-        <h2>Hello </h2>
-        <h3>How are you</h3>
-        <h2>i am fine</h2>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <ul>
-            <li class="listItem">one</li>
-            <li class="listItem">two</li>
-            <li class="listItem">three</li>
-            <li class="listItem">four</li>
-        </ul>
-    </div>
+<body style="background-color: #212121; color: #fff;">
+    <script>
+        const div = document.createElement('div')
+        console.log(div);
+        div.className = "main"
+        div.id = Math.round(Math.random() * 10 + 1)
+
+        div.setAttribute("title", "generated title")
+        div.style.backgroundColor = "orange"
+        div.style.padding = "12px"
+        // div.innerText = "Chai aur code"
+        const addText = document.createTextNode("Chai aur code")
+        div.appendChild(addText)
+
+        document.body.appendChild(div) // attaching to document
+    </script>
+</body>
 </body>
 </html>
