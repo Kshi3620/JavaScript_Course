@@ -1256,3 +1256,51 @@ myConvertedArray.forEach(function (li) {
 </body>
 </html>
 ```
+
+## Edit and remove elements in DOM
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body> 
+<script>
+    function addLanguage(langName){
+        const listItem = document.createElement("li")
+        listItem.innerHTML = `${langName}`
+        document.querySelector(".language").appendChild(listItem)
+    }
+    addLanguage("Python")
+    addLanguage("Typescript")
+
+    function addOptiLanguage(langName){
+        const li = document.createElement("li")
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").appendChild(li)
+    }
+    addOptiLanguage("Golang")
+
+    // Edit
+
+    const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang);
+    const newLi = document.createElement("li")
+    newLi.textContent = "Mojo"
+    secondLang.replaceWith(newLi)
+
+    // Remove
+
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+    
+</script>
+</html>
+```
